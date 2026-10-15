@@ -41,7 +41,7 @@ export default function Home() {
     event.preventDefault();
     const cleanKey = passkey.replace(/[^0-9]/g, "").trim();
 
-    if (cleanKey === "19112005") {
+    if (cleanKey === "1911") {
       playChime();
       setUnlocked(true);
       setError("");
@@ -152,8 +152,8 @@ export default function Home() {
                 onChange={(e) => setPasskey(e.target.value)}
                 type="password"
                 inputMode="numeric"
-                maxLength={10}
-                placeholder="DDMMYYYY"
+                maxLength={6}
+                placeholder="DDMM"
               />
               <button type="submit" aria-label="Unlock">
                 ✦
@@ -175,7 +175,7 @@ export default function Home() {
                 </button>
               ) : (
                 <span className="hintText animateFadeIn">
-                  Hint: Abdullah’s birth date in DDMMYYYY format ✨
+                  Hint: Abdullah’s birth date in DDMM format ✨
                 </span>
               )}
             </div>
